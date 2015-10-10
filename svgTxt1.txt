@@ -1,0 +1,1 @@
+path id="rect1" d="m0 0 h 150 v 100 h -150 z" style="stroke: black; fill: yellow;"
