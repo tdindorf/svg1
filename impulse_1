@@ -1,0 +1,172 @@
+<svg id="main" width="500px" height="300px" 
+	text-anchor="end" font-size="16" font-family="arial"
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink"
+	onload="setLiquidLevel()">
+
+<desc> +++ v-t graph 9 +++ </desc>
+
+<rect x="1" y="1" width="498" height="298" stroke-width="1" stroke="blue" fill = "none"/>
+
+<script type="text/ecmascript">
+    <![CDATA[
+
+	function setLiquidLevel() {
+
+  	var oY = {oY};		// ++ for graphs not starting at 0,0
+  	var oX = {oX};
+
+	var rY = {rY};		// ++ scale range
+	var rX = {rX};
+
+	var Ymx = oY + rY;		// ++ scale max
+	var Xmx = oX + rX;
+
+	var Yinc = rY/5;		// ++ scale increments (default = 5 steps)
+	var Xinc = rX/5;
+
+	var Xmx_px = 200;		// ++ set graph size in px
+	var Ymx_px = 200;
+
+	var Ypx_unt = Ymx_px/rY;	// ++ set px scale  
+	var Xpx_unt = Xmx_px/rX;
+
+				// ++ draw and label axes
+	for (var i=0; i<6; i++) {
+	N = document.getElementById("Y_label_" + i);
+  	N.setAttribute("x", 0); 			
+  	N.setAttribute("y", - 40*i);		// *!*! 40 px per step hardcoded !*!*
+  		N.textContent = oY + (i+0) * Yinc; // set Y scale values
+	}
+
+  	for (var i=0; i<6; i++) {
+	N = document.getElementById("X_label_" + i);
+  	N.setAttribute("x", 40*i); 		// *!*! 40 px per step hardcoded !*!*		
+  	N.setAttribute("y", 0);
+  		N.textContent = oX + (i+0) * Xinc; // set X scale values
+	}
+
+				// ++ import data values ++
+
+	var X1 = {X1};	// line form x-axis to x-max
+	var X2 = Xmx;
+
+	var Y1 = 0;
+	var Y2 = Ymx;
+
+				// ++ convert data values to px values (y = -y hardcoded)
+	X1 = X1 * Xpx_unt; // * Xinc;
+	X2 = X2 * Xpx_unt; //  * Xinc;
+
+	Y1 = -Y1 * Ypx_unt; //  * Yinc;
+	Y2 = -Y2 * Ypx_unt; //  * Yinc;
+
+				// ++ draw coordinate lines and curves ++
+
+	Y2_crd = document.getElementById("Y2_crd"); 
+		Y2_crd.setAttributeNS(null,"d", "m 0 " + Y2 + " h " + X2);
+	X2_crd = document.getElementById("X2_crd"); 
+		X2_crd.setAttributeNS(null,"d", "m "+ X2 + " 0 v " + Y2);
+
+	line_b = document.getElementById("line b"); 
+		line_b.setAttributeNS(null,"d", "m " + 
+		X1 + " " + Y1 + " L " + X2 + " " + Y2);
+        }
+    ]]>
+</script>
+
+    <marker id = "V_end_1"
+      	viewBox = "0 0 10 10" refX = "10" refY = "5" 
+      	markerUnits = "userSpaceOnUse"
+      	markerWidth = "10" markerHeight = "10"
+      	orient = "auto" 
+	style="stroke-width: 2; 
+	stroke: blue; fill: none">
+      		<path d="M 0 0 L 10 5 L 0 10"/>
+    </marker>
+
+<desc>Whole Page is shifted down 350; 
+	all y values are '-' in real time</desc>
+
+<!--Whole_page start ...-->
+<g 	id="whole page"
+	fill="none" 
+	stroke-width="1"
+	text-anchor="middle"
+	transform="translate (100,240)">
+
+<g id="graph" transform="scale(1, 1)">
+	<g id="axes" stroke="blue" >  <!--add end markers-->
+		<path id="x-Axis" d="M 0 0 h 220" marker-end="url(#V_end_1)"/>
+		<path id="y-Axis" d="M 0 0 v -220" marker-end="url(#V_end_1)"/>
+
+		<path id="x-minor-ticks" d="M 0 0 h 205" stroke-dasharray="1,19" stroke-width="10" 
+stroke="silver"/>
+		<path id="y-minor-ticks" d="M 0 0 v -205" stroke-dasharray="1,19" stroke-width="10" stroke="silver"/>
+
+		<!--path id="x-minor-grid" d="M 0 -100 h 205" stroke-dasharray="1,19" stroke-width="210" stroke="silver"/>
+		<path id="y-minor-grid" d="M 100 0 v -205" stroke-dasharray="1,7" stroke-width="210" stroke="silver"/-->
+
+		<path id="x-Major-ticks" d="M 0 0 h 210" stroke-dasharray="1,39" stroke-width="10"/>
+		<path id="y-Major-ticks" d="M 0 0 v -205" stroke-dasharray="1,39" stroke-width="10"/>
+
+		<!--path id="x-Major-grid" d="M 0 -100 h 210" stroke-dasharray="1,39" stroke-width="210"/>
+		<path id="y-Major-grid" d="M 100 0 v -205" stroke-dasharray="1,39" stroke-width="210"/-->
+	</g>
+
+
+	<g id="crdinate_lines_2" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+		<path id="Y2_crd" d="M 0 -50 h 0"/>
+		<path id="X2_crd" d="M 0 -50 h 0"/>
+	</g>
+
+	<g id="crdinate_lines_3" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+		<path id="Y3_crd" d="M 0 -50 h 0"/>
+		<path id="X3_crd" d="M 0 -50 h 0"/>
+	</g>
+
+	<g id="crdinate_lines_4" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+		<path id="Y4_crd" d="M 0 -50 h 0"/>
+		<path id="X4_crd" d="M 0 -50 h 0"/>
+	</g>
+	
+	<g id="line_2" stroke="green" stroke-width="3" transform="translate(0,-1)">
+		<path id="line b" d="M 0 0" />
+	</g>
+
+	<desc> X axis label and scale, variable </desc>
+	<g transform="translate(0,25)" fill="black" text-anchor="middle"> 
+
+			<text id="X_label_0"/>
+			<text id="X_label_1"/>
+			<text id="X_label_2"/>
+			<text id="X_label_3"/>
+			<text id="X_label_4"/>
+			<text id="X_label_5"/>
+
+		<text x="100" y="16" text-anchor="middle">
+		length [cm]
+		</text>
+	</g>
+
+	<desc> Y axis label and scale, variable </desc>
+	<g transform="translate(-15,5)" fill="black" text-anchor="end">
+			<text id="Y_label_0"/>
+			<text id="Y_label_1"/>
+			<text id="Y_label_2"/>
+			<text id="Y_label_3"/>
+			<text id="Y_label_4"/>
+			<text id="Y_label_5"/>
+
+		<text x="100" y="-35" transform="rotate(-90,0,0)" text-anchor="middle">
+		force [N]
+		</text>
+	</g>
+
+
+
+</g> <!--... end of graph-->>
+
+</g> <!--... end Whole_page -->>
+
+</svg>
