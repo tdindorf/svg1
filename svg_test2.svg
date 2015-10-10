@@ -1,4 +1,7 @@
-<svg width='250' height='400'
+<svg 
+xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width='250' height='400'
 	style='fill:none; stroke:black'>
 
 <style scoped>
