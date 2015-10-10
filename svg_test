@@ -1,0 +1,78 @@
+<svg width='250' height='400'
+	style='fill:none; stroke:black'>
+
+<style scoped>
+	text {fill:black; stroke:none; text-anchor:middle;} 
+	.sub {baseline-shift:sub; font-size:70%}
+	.sup {baseline-shift:super; font-size:70%}
+</style>
+
+	<rect id='svgFrame' width='250' height='400' fill='none' stroke='blue'/>
+
+<defs>
+	<g id='box1'>
+		<rect height='50' width='50' x='-25' y='-25'/>
+		<text x='0' y='5' transform='scale (1 -1)'>m<tspan class='sub'>1</tspan></text>
+		</g>
+
+	<g id='box2'>
+		<rect height='50' width='50' x='-25' y='-25'/>
+		<text x='0' y='5' transform='scale (1 -1)'>5 kg</text>
+		</g>
+
+	<g id='box3'>
+		<rect height='50' width='50' x='-25' y='-25'/>
+		<text x='0' y='5' transform='scale (1 -1)'>m<tspan class='sub'>3</tspan></text>
+		</g>
+
+	<g id='T1' >
+		<text x='0' y = '-5' transform='scale (1 -1)'
+		style='text-anchor:start'>T<tspan class='sub'>1</tspan></text>
+		</g>
+
+	<g id='T2' >
+		<text x='0' y = '-5' transform='scale (1 -1)'
+		style='text-anchor:start'>T<tspan class='sub'>2</tspan></text>
+		</g>
+
+	<g id='a' >
+		<path d='M -20 0 A 20 20 0 0 0 20 0' marker-end='url(#v_end)'/>
+		<path d='M 20 -10 v -6 m 3 3 h-6'/>
+		<text x='50' y = '-30' transform='scale (1 -1)'
+		style='text-anchor:start'>a / m s<tspan class='sup'>-2</tspan></text>
+		</g>
+
+	<g id='pulley' >
+		<circle cx='0' cy='0' r='40' stroke='#aaaaaa'/>
+		<path d='M 0 0 v 100' stroke='grey' stroke-width='2'/>
+		</g>
+
+	<marker id = "v_end"
+      		refX = "5" refY = "3" 
+      		markerWidth = "10" markerHeight = "6"
+      		orient = "auto" 
+		style="stroke-width: 1; stroke: red; fill: none">
+      		<path d='M 0 6 l 10 -3 l -10 -3'/>
+	</marker>
+</defs>
+
+
+    <g id='page' transform='translate(110 80) scale (1 -1)'>
+
+   	<path id='string' d='M -40 0 v -100 M 40 0 v -250'
+		stroke='#aaaaaa'/>
+
+	<use xlink:href='#pulley' x='0' y='0'/>
+
+	<use xlink:href='#box1' fill='#ffdddd' x='-40' y='-120'/>
+	<use xlink:href='#box2' fill='#ddddff' x='40' y='-140'/>
+	<use xlink:href='#box3' fill='#ddffdd' x='40' y='-240' />
+
+	<use xlink:href='#T1' x='45' y='-100'/>
+	<use xlink:href='#T2' x='45' y='-200'/>
+
+	<use xlink:href='#a'  stroke='red' x='0' y='0'/>
+
+    </g><!-- /id='page'-->
+
+</svg>
