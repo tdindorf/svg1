@@ -36,14 +36,14 @@ text-anchor="end" font-size="16" font-family="arial">
 		<path id="x-minor-ticks" d="M 0 0 h 205" stroke-dasharray="1,19" stroke-width="10" stroke="silver"/>
 		<path id="y-minor-ticks" d="M 0 0 v -205" stroke-dasharray="1,19" stroke-width="10" stroke="silver"/>
 
-		<!--path id="x-minor-grid" d="M 0 -100 h 205" stroke-dasharray="1,19" stroke-width="210" stroke="silver"/>
-		<path id="y-minor-grid" d="M 100 0 v -205" stroke-dasharray="1,7" stroke-width="210" stroke="silver"/-->
+		<path id="x-minor-grid" d="M 0 -100 h 205" stroke-dasharray="1,19" stroke-width="210" stroke="silver"/>
+		<path id="y-minor-grid" d="M 100 0 v -205" stroke-dasharray="1,7" stroke-width="210" stroke="silver"/>
 
 		<path id="x-Major-ticks" d="M 0 0 h 210" stroke-dasharray="1,39" stroke-width="10"/>
 		<path id="y-Major-ticks" d="M 0 0 v -205" stroke-dasharray="1,39" stroke-width="10"/>
 
-		<!--path id="x-Major-grid" d="M 0 -100 h 210" stroke-dasharray="1,39" stroke-width="210"/>
-		<path id="y-Major-grid" d="M 100 0 v -205" stroke-dasharray="1,39" stroke-width="210"/-->
+		<path id="x-Major-grid" d="M 0 -100 h 210" stroke-dasharray="1,39" stroke-width="210"/>
+		<path id="y-Major-grid" d="M 100 0 v -205" stroke-dasharray="1,39" stroke-width="210"/>
 	</g>
 
 	<g id="crdinate_lines_2" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
