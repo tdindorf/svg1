@@ -52,7 +52,7 @@ text-anchor="end" font-size="16" font-family="arial">
 		<path id="X0_crd" d="M 0 -50 h 0"/>
 	</g>
 	
-		<g id="crdinate_lines_1">
+	<g id="crdinate_lines_1">
 		<path id="Y1_crd" d="M 0 -50 h 0"/>
 		<path id="X1_crd" d="M 0 -50 h 0"/>
 	</g>
