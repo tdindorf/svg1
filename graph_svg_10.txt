@@ -46,20 +46,32 @@ text-anchor="end" font-size="16" font-family="arial">
 		<path id="y-Major-grid" d="M 100 0 v -205" stroke-dasharray="1,39" stroke-width="210"/-->
 	</g>
 
-	<g id="crdinate_lines_2" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+	<g id="crdinate_lines" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+	<g id="crdinate_lines_0">
+		<path id="Y0_crd" d="M 0 -50 h 0"/>
+		<path id="X0_crd" d="M 0 -50 h 0"/>
+	</g>
+	
+		<g id="crdinate_lines_1">
+		<path id="Y1_crd" d="M 0 -50 h 0"/>
+		<path id="X1_crd" d="M 0 -50 h 0"/>
+	</g>
+	
+	<g id="crdinate_lines_2">
 		<path id="Y2_crd" d="M 0 -50 h 0"/>
 		<path id="X2_crd" d="M 0 -50 h 0"/>
 	</g>
 
-	<g id="crdinate_lines_3" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+	<g id="crdinate_lines_3">
 		<path id="Y3_crd" d="M 0 -50 h 0"/>
 		<path id="X3_crd" d="M 0 -50 h 0"/>
 	</g>
 
-	<g id="crdinate_lines_4" stroke="grey" stroke-width="1" stroke-dasharray="2, 4">
+	<g id="crdinate_lines_4">
 		<path id="Y4_crd" d="M 0 -50 h 0"/>
 		<path id="X4_crd" d="M 0 -50 h 0"/>
 	</g>
+	</g><!-- coor lines group-->
 	
 	<g id="line_2" stroke="green" stroke-width="3" transform="translate(0,-1)">
 		<path id="line b" d="M 0 0" />
