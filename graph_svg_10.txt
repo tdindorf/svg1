@@ -9,37 +9,6 @@ onload="setLiquidLevel()">
 
 <rect x="1" y="1" width="498" height="298" stroke-width="1" stroke="blue" fill = "none"/>
 
-<script type="text/ecmascript"><![CDATA[
-
-function setLiquidLevel() {
-
-	for (var i=0; i<6; i++) {
-	N = document.getElementById("Y_label_" + i);
-  	N.setAttribute("x", 0); 			
-  	N.setAttribute("y", - 40*i);		// *!*! 40 px per step hardcoded !*!*
-  	        N.textContent = {oY} + (i+0) * {Yinc}; //# set Y scale values
-	}
-
-  	for (var i=0; i<6; i++) {
-	N = document.getElementById("X_label_" + i);
-  	N.setAttribute("x", 40*i); 		//# *!*! 40 px per step hardcoded !*!*		
-  	N.setAttribute("y", 0);
-  		N.innerHTML = {oX} + (i+0) * {Xinc}; //# set X scale values
-	}
-
-	Y2_crd = document.getElementById("Y2_crd"); 
-		Y2_crd.setAttributeNS(null,"d", "m 0 " + {Y2_px} + " h " + {X2_px});
-	X2_crd = document.getElementById("X2_crd"); 
-		X2_crd.setAttributeNS(null,"d", "m "+ {X2_px} + " 0 v " + {Y2_px});
-
-	line_b = document.getElementById("line b"); 
-		line_b.setAttributeNS(null,"d", "m " + 
-		{X1_px} + " " + {Y1_px} + " L " + {X2_px} + " " + {Y2_px} + " L " + {X3_px} + " " + {Y3_px});
-	}
-
-    ]]>
-</script>
-
     <marker id = "V_end_1"
       	viewBox = "0 0 10 10" refX = "10" refY = "5" 
       	markerUnits = "userSpaceOnUse"
