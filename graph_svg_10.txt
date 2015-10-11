@@ -2,8 +2,7 @@
 xmlns="http://www.w3.org/2000/svg" 
 xmlns:xlink="http://www.w3.org/1999/xlink"
 id="main" width="500px" height="300px" 
-text-anchor="end" font-size="16" font-family="arial"
-onload="setLiquidLevel()">
+text-anchor="end" font-size="16" font-family="arial">
 
 <desc> +++ v-t graph 9 +++ </desc>
 
