@@ -87,9 +87,7 @@ text-anchor="end" font-size="16" font-family="arial">
 			<text id="X_label_4"/>
 			<text id="X_label_5"/>
 
-		<text x="100" y="16" text-anchor="middle">
-		time [s]
-		</text>
+		<text id="XaxisLabel" x="100" y="16" text-anchor="middle"></text>
 	</g>
 
 	<desc> Y axis label and scale, variable </desc>
@@ -101,9 +99,7 @@ text-anchor="end" font-size="16" font-family="arial">
 			<text id="Y_label_4"/>
 			<text id="Y_label_5"/>
 
-		<text x="100" y="-35" transform="rotate(-90,0,0)" text-anchor="middle">
-		force [N]
-		</text>
+		<text id="YaxisLabel" x="100" y="-35" transform="rotate(-90,0,0)" text-anchor="middle"></text>
 	</g>
 
 
