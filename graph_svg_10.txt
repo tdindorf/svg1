@@ -1,12 +1,12 @@
 <svg
 xmlns="http://www.w3.org/2000/svg" 
 xmlns:xlink="http://www.w3.org/1999/xlink"
-id="main" width="500px" height="300px" 
+id="main" width="400px" height="300px" 
 text-anchor="end" font-size="16" font-family="arial">
 
 <desc> +++ v-t graph 9 +++ </desc>
 
-<rect x="1" y="1" width="498" height="298" stroke-width="1" stroke="blue" fill = "none"/>
+<rect width="400" height="300" stroke-width="1" stroke="blue" fill = "none"/>
 
     <marker id = "V_end_1"
       	viewBox = "0 0 10 10" refX = "10" refY = "5" 
@@ -101,8 +101,6 @@ text-anchor="end" font-size="16" font-family="arial">
 
 		<text id="YaxisLabel" x="100" y="-35" transform="rotate(-90,0,0)" text-anchor="middle"></text>
 	</g>
-
-
 
 </g> <!--... end of graph-->>
 
